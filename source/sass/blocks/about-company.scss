@@ -1,0 +1,88 @@
+.about-company {
+  padding: 60px 0 120px;
+
+  @include vp-1023 {
+    padding: 40px 0 80px;
+  }
+
+  @include vp-767 {
+    padding: 10px 0 80px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    column-gap: 4.6%;
+
+    @include vp-1023 {
+      column-gap: 0;
+    }
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__image {
+    img {
+      width: 150px;
+      height: 320px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    padding-left: 50px;
+
+    @include vp-1023 {
+      padding-left: 30px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
+
+    button {
+      margin-top: 10px;
+      min-width: 180px;
+      min-height: 45px;
+      font-family: $ff-roboto;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      justify-content: center;
+      align-items: center;
+      color: $color-deep-sky-blue;
+      border: 1px solid $color-deep-sky-blue;
+      border-radius: 3px;
+    }
+  }
+
+  h2 {
+    margin: 0 0 10px;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+
+  p {
+    line-height: 22px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}

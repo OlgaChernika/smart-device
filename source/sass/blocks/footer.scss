@@ -1,0 +1,162 @@
+.footer {
+  padding: 50px 0;
+  background-color: $color-black-pearl;
+
+  @include vp-767 {
+    padding: 35px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-1023 {
+      flex-direction: column;
+    }
+  }
+
+  &__top-wrapper {
+    @include vp-1023 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @include vp-767 {
+      margin-bottom: 25px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__bottom-wrapper {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include vp-1023 {
+      width: 100%;
+    }
+
+    @include vp-767 {
+      position: relative;
+      flex-direction: column;
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: -25px;
+        width: calc(100% + 50px);
+        height: 1px;
+        background-color: rgba($color-alice-blue, 0.7);
+      }
+    }
+  }
+
+  &__block {
+    @include vp-767 {
+      padding: 20px 0;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -25px;
+        width: calc(100% + 50px);
+        height: 1px;
+        background-color: rgba($color-alice-blue, 0.7);
+      }
+    }
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+
+    img:first-of-type {
+      margin-right: 15px;
+    }
+  }
+
+  h2 {
+    margin: 0 0 20px;
+    color: rgba($color-default-white, 0.7);
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    @include vp-767 {
+      position: relative;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  a {
+    color: rgba($color-default-white, 0.7);
+    line-height: 22px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  &__nav {
+    width: 55.04%;
+
+    @include vp-1023 {
+      width: auto;
+    }
+
+    ul {
+      width: 100%;
+      justify-content: space-between;
+
+      @include vp-1023 {
+        flex-direction: column;
+      }
+    }
+
+    li {
+      width: 46.8%;
+      display: flex;
+      flex-direction: column;
+
+      @include vp-1023 {
+        width: 90%;
+      }
+    }
+
+    a {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__contacts {
+    width: 40.4%;
+
+    @include vp-1023 {
+      width: auto;
+    }
+
+    ul {
+      flex-direction: column;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
