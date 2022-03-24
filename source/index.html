@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="intro">
+      <section class="intro" id="intro">
         <div class="intro__bg">
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/content/intro-mob.webp 1x, img/content/intro-mob@2x.webp 2x">
@@ -59,7 +59,7 @@
             <div class="intro-content__wrapper">
               <h2>Печатные платы</h2>
               <p>Производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-              <a href="#feedback">
+              <a href="#feedback" data-anchor>
                 <span>Получить бесплатную консультацию</span>
                 <span>Бесплатная консультация</span>
               </a>
@@ -103,26 +103,27 @@
             </ul>
           </div>
         </section>
-        <section class="about-company">
-          <div class="about-company__container container">
+        <section class="about-company" id="about-company">
+          <div class="about-company__container container" data-accordion="parent">
             <div class="about-company__image">
               <picture>
                 <source type="image/webp" srcset="img/content/2022.webp 1x, img/content/2022@2x.webp 2x">
                 <img src="img/content/2022.png" srcset="img/content/2022@2x.png 2x" alt="Печатные платы" width="150" height="320">
               </picture>
             </div>
-            <div class="about-company__wrapper">
+            <div class="about-company__wrapper" data-accordion="element">
               <h2>О&nbsp;компании</h2>
               <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
-              <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span data-hidden>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-              <div class="is-hide" data-hidden>
+              <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+              <div class="about-company__accordion-content" data-accordion="content">
+                <p>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
                 <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия. Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.</p>
               </div>
-              <button class="btn" type="button" data-more-button><span>Подробнее</span><span class="is-hide">Свернуть</span></button>
+              <button class="btn" type="button" data-accordion="button"><span>Подробнее</span><span>Свернуть</span></button>
             </div>
           </div>
         </section>
-        <section class="service">
+        <section class="service" id="service">
           <div class="service__container container">
             <h2><span>Smart Device предлагает следующие товары и&nbsp;услуги</span><span>Товары и&nbsp;услуги Smart Device</span></h2>
             <ul>
@@ -174,6 +175,35 @@
             </ul>
           </div>
         </section>
+        <section class="feedback" id="feedback">
+          <h2 class="visually-hidden">Обратная связь</h2>
+          <div class="feedback__container container">
+            <div class="feedback__image">
+              <source type="image/webp" srcset="img/content/airplane-desk.webp 1x, img/content/airplane-desk@2x.webp 2x">
+              <img src="img/content/airplane-desk.png"  srcset="img/content/airplane-desk@2x.png 2x" alt="Обратная связь" width="510" height="285">
+            </div>
+            <div class="feedback__wrapper">
+              <h3>Остались вопросы? Задайте их&nbsp;нам!</h3>
+              <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
+              <div data-validate>
+                <form action="http://echo.htmlacademy.ru" method="POST">
+                  <label for="name" data-validate-type="text" data-limitations="letters">
+                    <input type="text" name="user-name" maxlength="100" id="name" placeholder="Имя" required>
+                  </label>
+                  <label for="phone" data-validate-type="phone">
+                    <input name="user-phone" type="tel" id="phone" placeholder="Телефон" required>
+                  </label>
+                    <textarea name="user-question" placeholder="Ваш вопрос"></textarea>
+                  <div class="feedback__checkbox" data-validate-type="checkbox">
+                    <input class="visually-hidden" type="checkbox" name="user-agreement" id="user-agreement" required>
+                    <label for="user-agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+                  </div>
+                  <button class="btn" type="submit">Задать&nbsp;вопрос</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
@@ -188,7 +218,7 @@
         <div class="footer__container container">
           <div class="footer__top-wrapper">
             <div class="footer__logo">
-              <a href="#">
+              <a href="#intro" data-anchor>
                 <img src="img/svg/logo-pic.svg" alt="Логотип" width="55" height="55">
                 <img src="img/svg/logo-text.svg" alt="Логотип" width="145" height="45">
               </a>
@@ -219,30 +249,32 @@
               </ul>
             </div>
           </div>
-          <div class="footer__bottom-wrapper">
-            <div class="footer__block footer__nav nav">
+          <div class="footer__bottom-wrapper" data-accordion="parent" data-single>
+            <div class="footer__block footer__nav" data-accordion="element">
               <h2>Разделы сайта</h2>
-              <nav>
+              <button class="btn" type="button" data-accordion="button">Разделы сайта</button>
+              <nav data-accordion="content">
                 <ul>
                   <li>
-                    <a href="">О&nbsp;Компаниии</a>
-                    <a href="">Продукты</a>
-                    <a href="">Протзводство печатных плат</a>
-                    <a href="">Монтаж печатных плат</a>
+                    <a href="#about-company" data-anchor>О&nbsp;Компаниии</a>
+                    <a href="#service" data-anchor>Продукты</a>
+                    <a href="#">Производство печатных плат</a>
+                    <a href="#">Монтаж печатных плат</a>
                   </li>
                   <li>
-                    <a href="">Комплектующие</a>
-                    <a href="">Доставка</a>
-                    <a href="">Контакты</a>
+                    <a href="#">Комплектующие</a>
+                    <a href="#">Доставка</a>
+                    <a href="#">Контакты</a>
                   </li>
                 </ul>
               </nav>
             </div>
-            <div class="footer__block footer__contacts">
+            <div class="footer__block footer__contacts" data-accordion="element">
               <h2>Наш офис</h2>
-              <ul>
+              <button class="btn" type="button" data-accordion="button">Наш офис</button>
+              <ul data-accordion="content">
                 <li>
-                  <a href="" target="__blank">г. Мытищи, Олимпийский проспект, д.10</a>
+                  <a href="https://yandex.ru/maps/10740/mytischi/house/olimpiyskiy_prospekt_s10/Z04YcQBiSkIOQFtvfXVwd39rYg==/?ll=37.772379%2C55.916386&z=17.06" target="__blank">г. Мытищи, Олимпийский проспект, д.10</a>
                 </li>
                 <li>
                   <a href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -263,7 +295,24 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <h2>Закажите звонок</h2>
+          <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+          <div data-validate>
+            <form action="http://echo.htmlacademy.ru" method="POST">
+              <label for="callback-name" data-validate-type="text" data-limitations="letters">
+                <input type="text" name="callback-name" maxlength="100" id="callback-name" placeholder="Имя" required>
+              </label>
+              <label for="callback-phone" data-validate-type="phone">
+                <input name="callback-phone" type="tel" id="callback-phone" placeholder="Телефон" required>
+              </label>
+                <textarea name="callback-question" placeholder="Ваш вопрос"></textarea>
+              <div class="modal__checkbox" data-validate-type="checkbox">
+                <input class="visually-hidden" type="checkbox" name="callback-agreement" id="callback-agreement" required>
+                <label for="callback-agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+              </div>
+              <button class="btn" type="submit">Отправить</button>
+            </form>
+          </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
@@ -272,21 +321,6 @@
         </div>
       </div>
     </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

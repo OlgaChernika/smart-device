@@ -70,3 +70,13 @@
 .is-hide {
   display: none;
 }
+
+.is-invalid {
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px $color-torch-red;
+}
+
+.is-valid {
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px $color-default-white;
+}

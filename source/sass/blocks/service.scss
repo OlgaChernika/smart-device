@@ -1,23 +1,27 @@
 .service {
-  padding: 70px 0 55px;
+  padding: 66px 0 55px;
   background-color: $color-black-pearl;
   color: $color-default-white;
 
   @include vp-1023 {
-    padding: 60px 0 45px;
+    padding: 55px 0 45px;
   }
 
-  @include vp-1023 {
-    padding: 50px 0 56px;
+  @include vp-767 {
+    padding: 47px 0 55px;
   }
 
   h2 {
-    margin: 0 0 40px;
+    margin: 0 0 54px;
     font-family: $ff-roboto;
     font-weight: 400;
     font-size: 36px;
     line-height: 51px;
     color: $color-default-white;
+
+    @include vp-1023 {
+      margin: 0 0 38px;
+    }
 
     @include vp-767 {
       margin: 0 0 30px;
@@ -131,7 +135,7 @@
     h3 {
       position: absolute;
       width: 47%;
-      top: 50px;
+      top: 47px;
       left: 40px;
       font-family: $ff-roboto;
       font-weight: 400;
@@ -142,15 +146,15 @@
       margin: 0;
 
       @include vp-1023 {
-        width: 23%;
-        top: 40px;
+        width: 22%;
+        top: 37px;
         left: 45px;
       }
 
       @include vp-767 {
         width: 50%;
         font-size: 18px;
-        top: 30px;
+        top: 25px;
         left: 30px;
       }
     }

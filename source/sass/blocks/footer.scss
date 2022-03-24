@@ -1,6 +1,10 @@
 .footer {
-  padding: 50px 0;
+  padding: 50px 0 45px;
   background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding: 50px 0 53px;
+  }
 
   @include vp-767 {
     padding: 35px 0;
@@ -23,7 +27,7 @@
     }
 
     @include vp-767 {
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       flex-direction: column;
       align-items: center;
     }
@@ -56,8 +60,13 @@
   }
 
   &__block {
+    @include vp-1023 {
+      width: 47.8%;
+    }
+
     @include vp-767 {
-      padding: 20px 0;
+      width: 100%;
+      padding: 10px 0;
       position: relative;
 
       &::before {
@@ -70,18 +79,29 @@
         background-color: rgba($color-alice-blue, 0.7);
       }
     }
+
+    &.is-active button::after {
+      @include vp-767 {
+        transform: rotate(0deg);
+      }
+    }
   }
 
   &__logo {
     margin-bottom: 20px;
+
+    @include vp-767 {
+      margin: 0 0 3px -5px;
+    }
 
     img:first-of-type {
       margin-right: 15px;
     }
   }
 
-  h2 {
-    margin: 0 0 20px;
+  h2,
+  button {
+    margin: 7px 0 22px;
     color: rgba($color-default-white, 0.7);
     font-family: $ff-roboto;
     font-weight: 400;
@@ -90,8 +110,46 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
+    @include vp-1023 {
+      margin: 10px 0 22px;
+    }
+
     @include vp-767 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  h2 {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  button {
+    display: none;
+
+    @include vp-767 {
+      padding: 12px 40px 12px 0;
       position: relative;
+      display: flex;
+      width: 100%;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 1px;
+        top: 50%;
+        right: 1px;
+        transform: translateY(-50%);
+        background-color: $color-alice-blue;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
     }
   }
 
@@ -114,10 +172,12 @@
   }
 
   &__nav {
+    margin-left: 9px;
     width: 55.04%;
 
     @include vp-1023 {
-      width: auto;
+      margin: 0;
+      padding-right: 23px;
     }
 
     ul {
@@ -126,6 +186,10 @@
 
       @include vp-1023 {
         flex-direction: column;
+      }
+
+      @include vp-767 {
+        padding-top: 3px;
       }
     }
 
@@ -140,23 +204,35 @@
     }
 
     a {
-      margin-bottom: 10px;
+      margin: 0 18px 7px 0;
+      width: fit-content;
+
+      @include vp-1023 {
+        margin-bottom: 8px;
+      }
     }
   }
 
   &__contacts {
     width: 40.4%;
 
-    @include vp-1023 {
-      width: auto;
-    }
-
     ul {
       flex-direction: column;
+
+      @include vp-767 {
+        padding-top: 3px;
+        flex-direction: row;
+      }
     }
 
     li {
-      margin-bottom: 10px;
+      margin-bottom: 6px;
+    }
+
+    li:first-of-type {
+      @include vp-767 {
+        margin-bottom: 6px;
+      }
     }
   }
 }

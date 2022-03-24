@@ -1,5 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {initFormValidate} from './modules/form-validation/init-form-validate';
+import {initAccordions} from './modules/accordions/init-accordion';
+import {initAnchors} from './smooth-scroll';
+import {resizeWindow} from './setPagePadding';
 
 // ---------------------------------
 
@@ -17,6 +21,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initFormValidate();
+    initAccordions();
+    initAnchors();
+    window.addEventListener('resize', resizeWindow);
   });
 });
 
