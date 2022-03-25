@@ -1,7 +1,7 @@
 .social {
   margin-left: 15px;
 
-  ul {
+  &__list {
     width: 140px;
     margin: 28px 0 0;
     padding: 0;
@@ -18,5 +18,20 @@
     @include vp-767 {
       margin: 10px 0 0 -11px;
     }
+
+    a {
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          .social__icon {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    transition: opacity $trans-default;
   }
 }

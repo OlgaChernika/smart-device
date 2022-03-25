@@ -11,28 +11,31 @@
     margin: -2px 15px 0 0;
   }
 
-  ul {
+  &__list {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
-    padding: 5px 0 0;
+    padding: 0;
     list-style: none;
 
     @include vp-1023 {
-      padding: 0;
       justify-content: flex-end;
     }
   }
 
-  li {
+  &__item {
     width: 225px;
     min-height: 40px;
     margin: 0 8px 10px 0;
 
     &:nth-child(2n) {
       margin-right: 0;
+    }
+
+    @include vp-1439 {
+      width: 212px;
     }
 
     @include vp-1023 {
@@ -54,6 +57,7 @@
     line-height: 18px;
     height: 100%;
     align-items: center;
+    transition: color $trans-default;
 
     @include vp-1023 {
       width: 100%;
@@ -64,18 +68,34 @@
       font-size: 0;
     }
 
-    svg {
-      position: absolute;
-      top: 10px;
-      left: 0;
-      width: 20px;
-      height: 20px;
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: rgba($color-alice-blue-mod, 0.7);
 
-      @include vp-1023 {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        .communications__icon {
+          @include vp-1023 {
+            fill: $color-alice-blue-mod;
+          }
+        }
       }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    transition: fill $trans-default;
+    fill: $color-deep-sky-blue;
+    transform: translateY(-50%);
+
+    @include vp-1023 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

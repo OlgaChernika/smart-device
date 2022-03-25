@@ -136,6 +136,14 @@
     color: $color-default-white;
     justify-content: center;
     align-items: center;
+    transition: background-color $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: rgba($color-black-pearl, 0.5);
+      }
+    }
   }
 
   &__checkbox {
@@ -154,6 +162,19 @@
       font-size: 14px;
       line-height: 16px;
       padding-left: 35px;
+      transition: color $trans-default;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          color: rgba($color-default-white, 0.8);
+
+          &::before,
+          &::after {
+            opacity: 0.8;
+          }
+        }
+      }
 
       @include vp-1023 {
         padding: 0 0 3px 25px;
@@ -173,6 +194,7 @@
         transform: translateY(-40%);
         border: 1px solid $color-default-white;
         border-radius: 3px;
+        transition: opacity $trans-default;
       }
 
       &::after {
@@ -187,6 +209,7 @@
         background-image: url("../img/svg/icon-check-mark.svg");
         background-repeat: no-repeat;
         background-size: 9px 6px;
+        transition: opacity $trans-default;
       }
     }
 
@@ -216,7 +239,17 @@
       right: 10px;
     }
 
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        svg {
+          opacity: 0.7;
+        }
+      }
+    }
+
     svg {
+      transition: opacity $trans-default;
       fill: $color-default-white;
     }
   }

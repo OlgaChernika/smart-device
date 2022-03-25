@@ -9,7 +9,7 @@
     padding: 50px 0 22px;
   }
 
-  ul {
+  &__list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -28,13 +28,14 @@
     }
   }
 
-  li {
+  &__item {
     margin: 0 0 30px;
     position: relative;
     padding: 40px 37px 40px 45px;
     width: 48.77%;
     min-height: 300px;
     border: 1px solid $color-whisper;
+    transition: background-color $trans-default;
 
     @include vp-1023 {
       width: 47.76%;
@@ -43,6 +44,7 @@
     }
 
     @include vp-767 {
+      margin: 0 auto 30px;
       padding: 30px 30px 40px;
       min-width: 270px;
       width: auto;
@@ -74,7 +76,6 @@
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover {
-        transition: all $trans-default;
         background-color: $color-deep-sky-blue;
 
         svg {

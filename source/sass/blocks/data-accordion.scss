@@ -11,3 +11,7 @@
   transition: max-height 0.3s;
   overflow: hidden;
 }
+
+[data-accordion="content"].no-js {
+  max-height: 100%;
+}
