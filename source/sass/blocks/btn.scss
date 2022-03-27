@@ -1,10 +1,11 @@
 .btn {
   display: inline-flex;
+
+  background-color: $color-transparent;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
-  background-color: $color-transparent;
 
   &:disabled {
     opacity: 0.5;

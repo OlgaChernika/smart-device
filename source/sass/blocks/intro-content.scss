@@ -1,6 +1,7 @@
 .intro-content {
-  padding-bottom: 70px;
   min-height: 880px;
+  padding-bottom: 70px;
+
   color: $color-alice-blue-mod;
 
   @include vp-1023 {
@@ -13,23 +14,26 @@
 
   &__title {
     margin: 0 0 32px;
-    font-family: $ff-roboto;
+
     font-weight: 700;
     font-size: 80px;
     line-height: 94px;
-    letter-spacing: 0.07em;
+    font-family: $ff-roboto;
     text-transform: uppercase;
+    letter-spacing: 0.07em;
 
     @include vp-1023 {
+      margin: 0 0 1px;
+
       font-size: 64px;
       line-height: 75px;
-      margin: 0 0 1px;
     }
 
     @include vp-767 {
+      margin: 0 0 7px;
+
       font-size: 36px;
       line-height: 43px;
-      margin: 0 0 7px;
     }
   }
 
@@ -49,9 +53,9 @@
   }
 
   a {
-    font-family: $ff-roboto;
     font-size: 18px;
     line-height: 21px;
+    font-family: $ff-roboto;
     color: $color-alice-blue-mod;
 
     @include vp-767 {
@@ -61,28 +65,29 @@
   }
 
   &__wrapper {
-    min-width: 720px;
     width: 79%;
-    padding-top: 185px;
+    min-width: 720px;
     margin-left: 125px;
+    padding-top: 185px;
 
     @include vp-1023 {
-      min-width: auto;
       width: 100%;
-      padding-top: 99px;
+      min-width: auto;
       margin: -20px 0 0;
+      padding-top: 99px;
     }
 
     @include vp-767 {
-      padding-top: 79px;
       margin: 0;
+      padding-top: 79px;
     }
   }
 
   &__description {
     width: 685px;
-    text-transform: lowercase;
     margin: 0 0 46px;
+
+    text-transform: lowercase;
 
     @include vp-1023 {
       width: auto;
@@ -95,17 +100,20 @@
   }
 
   &__link {
+    justify-content: center;
+    align-items: center;
     min-width: 410px;
+    min-height: 55px;
+    padding: 15px 25px;
+
     font-weight: 700;
     text-align: center;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
-    min-height: 55px;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 25px;
-    border-radius: 3px;
+    letter-spacing: 0.05em;
+
     background-color: $color-deep-sky-blue;
+    border-radius: 3px;
+
     transition: background-color $trans-default;
 
     @include vp-1023 {
@@ -113,10 +121,10 @@
     }
 
     @include vp-767 {
-      padding: 10px;
-      margin: 0;
       min-width: 270px;
       min-height: 40px;
+      margin: 0;
+      padding: 10px;
     }
 
     @media (hover: hover), screen and (min-width: 0\0) {

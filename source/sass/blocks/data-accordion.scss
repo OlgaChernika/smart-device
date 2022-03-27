@@ -8,8 +8,9 @@
 
 [data-accordion="content"] {
   max-height: 0;
-  transition: max-height 0.3s;
   overflow: hidden;
+
+  transition: max-height 0.3s;
 }
 
 [data-accordion="content"].no-js {

@@ -1,6 +1,11 @@
 const anchors = document.querySelectorAll('[data-anchor]');
 const header = document.querySelector('.header');
-const headerHight = header.getBoundingClientRect().height;
+let headerHight;
+if (header) {
+  headerHight = header.getBoundingClientRect().height;
+} else {
+  headerHight = 0;
+}
 
 const moveTo = new window.MoveTo({
   tolerance: `${headerHight}`,

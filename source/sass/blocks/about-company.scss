@@ -1,18 +1,16 @@
 .about-company {
-  padding: 60px 0 98px;
+  padding: 59px 0 100px;
 
   @include vp-1023 {
-    padding: 0 0 59px;
-  }
-
-  @include vp-767 {
     padding: 0 0 60px;
   }
 
   &__container {
     display: grid;
-    grid-template-columns: 150px 1fr;
+
     column-gap: 4.1%;
+
+    grid-template-columns: 150px 1fr;
 
     @include vp-1023 {
       column-gap: 0;
@@ -24,17 +22,17 @@
   }
 
   &__image {
-    img {
-      width: 150px;
-      height: 320px;
-    }
-
     @include vp-1023 {
       margin-left: -4px;
     }
 
     @include vp-767 {
       display: none;
+    }
+
+    img {
+      width: 150px;
+      height: 320px;
     }
   }
 
@@ -74,41 +72,45 @@
   }
 
   &__toggle {
-    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
     width: 180px;
     min-height: 45px;
-    font-family: $ff-roboto;
+    margin: 20px 0;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
+    font-family: $ff-roboto;
     text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
     color: $color-deep-sky-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
     border: 1px solid $color-deep-sky-blue;
     border-radius: 3px;
-    transition: background-color $trans-default;
 
-    &.no-js {
-      display: none;
-    }
+    transition: background-color $trans-default;
 
     @include vp-1023 {
       margin: -4px 0 20px;
     }
 
     @include vp-767 {
-      margin: 0 0 20px;
-      min-height: 35px;
       width: 160px;
+      min-height: 35px;
+      margin: 0 0 20px;
+    }
+
+    &.no-js {
+      display: none;
     }
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
       &:focus {
         color: $color-alice-blue-mod;
+
         background-color: $color-deep-sky-blue;
       }
     }
@@ -124,10 +126,11 @@
 
   h2 {
     margin: 0 0 11px;
-    font-family: $ff-roboto;
+
     font-weight: 400;
     font-size: 36px;
     line-height: 51px;
+    font-family: $ff-roboto;
 
     @include vp-767 {
       font-size: 28px;
@@ -137,6 +140,7 @@
 
   p {
     margin: 0 0 20px;
+
     line-height: 22px;
 
     @include vp-767 {

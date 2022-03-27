@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Электронные комплектующие и печатные платы">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
     <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -13,6 +17,7 @@
       <section class="intro" id="intro">
         <h2 class="visually-hidden">Smart Device</h2>
         <div class="intro__bg">
+          <!-- 1x: 1920x880, 2x: 3840x1760 -->
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/content/intro-mob.webp 1x, img/content/intro-mob@2x.webp 2x">
             <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/intro-tab.webp 1x, img/content/intro-tab@2x.webp 2x">
@@ -93,7 +98,7 @@
                   <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
                 </svg>
                 <h3>Полная конфиденциальность</h3>
-                <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфеденциальность.</p>
+                <p>По&nbsp;желанию клиента мы обеспечиваем полную конфеденциальность.</p>
               </li>
               <li class="advantages__item">
                 <svg class="advantages__icon advantages__icon--price" width="35" height="35">
@@ -108,6 +113,7 @@
         <section class="about-company" id="about-company">
           <div class="about-company__container container" data-accordion="parent">
             <div class="about-company__image">
+              <!-- 1x: 150x320, 2x: 300x640 -->
               <picture>
                 <source type="image/webp" srcset="img/content/2022.webp 1x, img/content/2022@2x.webp 2x">
                 <img src="img/content/2022.png" srcset="img/content/2022@2x.png 2x" alt="Печатные платы" width="150" height="320">
@@ -134,6 +140,7 @@
                 <a class="service__link" href="#">
                   <h3>Производство печатных плат</h3>
                   <div class="service__image">
+                    <!-- 1x: 350x650, 2x: 700x1300 -->
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/content/service-1-mob.webp 1x, img/content/service-1-mob@2x.webp 2x">
                       <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/service-1-tab.webp 1x, img/content/service-1-tab@2x.webp 2x">
@@ -149,6 +156,7 @@
                 <a class="service__link" href="#">
                   <h3>Монтаж печатных плат</h3>
                   <div class="service__image">
+                    <!-- 1x: 350x650, 2x: 700x1300 -->
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/content/service-2-mob.webp 1x, img/content/service-2-mob@2x.webp 2x">
                       <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/service-2-tab.webp 1x, img/content/service-2-tab@2x.webp 2x">
@@ -164,6 +172,7 @@
                 <a class="service__link" href="#">
                   <h3>Комплектующие для&nbsp;светотехники</h3>
                   <div class="service__image">
+                    <!-- 1x: 350x650, 2x: 700x1300 -->
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/content/service-3-mob.webp 1x, img/content/service-3-mob@2x.webp 2x">
                       <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/service-3-tab.webp 1x, img/content/service-3-tab@2x.webp 2x">
@@ -178,11 +187,12 @@
             </ul>
           </div>
         </section>
-        <section class="feedback" id="feedback">
+        <section class="feedback">
           <h2 class="visually-hidden">Обратная связь</h2>
           <div class="feedback__container container">
             <div class="feedback__image">
               <picture>
+                <!-- 1x: 510x285, 2x: 1020x570 -->
                 <source type="image/webp" srcset="img/content/airplane-desk.webp 1x, img/content/airplane-desk@2x.webp 2x">
                 <img src="img/content/airplane-desk.png"  srcset="img/content/airplane-desk@2x.png 2x" alt="Обратная связь" width="510" height="285">
               </picture>

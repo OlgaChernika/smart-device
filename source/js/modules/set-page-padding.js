@@ -2,6 +2,9 @@ const paddingWrapper = document.querySelector('.intro-content');
 const header = document.querySelector('.header');
 
 const setPageWrapperPadding = () => {
+  if (!paddingWrapper && !header) {
+    return;
+  }
   const breakpoint = window.matchMedia('(min-width:1024px)');
   const breakpointChecker = () => {
     if (breakpoint.matches) {

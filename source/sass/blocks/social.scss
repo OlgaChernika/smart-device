@@ -2,13 +2,14 @@
   margin-left: 15px;
 
   &__list {
-    width: 140px;
-    margin: 28px 0 0;
-    padding: 0;
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 140px;
+    margin: 28px 0 0;
+    padding: 0;
+
+    list-style: none;
     column-gap: 25px;
 
     @include vp-1023 {
