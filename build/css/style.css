@@ -782,7 +782,7 @@ button,
   width: 100%;
   padding: 10px 15px;
   line-height: 22px;
-  color: #ffffff;
+  color: #041827;
   background: rgba(4, 24, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -811,6 +811,13 @@ button,
 .modal input::placeholder,
 .modal textarea::placeholder {
   color: #ffffff;
+}
+
+.modal input:hover,
+.modal input:focus,
+.modal textarea:hover,
+.modal textarea:focus {
+  background: rgba(4, 24, 39, 0.2);
 }
 
 .modal input {
@@ -1690,7 +1697,7 @@ button,
   width: 100%;
   padding: 10px 15px;
   line-height: 22px;
-  color: #ffffff;
+  color: #041827;
   background: rgba(4, 24, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -1719,6 +1726,13 @@ button,
 .feedback__wrapper input::placeholder,
 .feedback__wrapper textarea::placeholder {
   color: #ffffff;
+}
+
+.feedback__wrapper input:hover,
+.feedback__wrapper input:focus,
+.feedback__wrapper textarea:hover,
+.feedback__wrapper textarea:focus {
+  background: rgba(4, 24, 39, 0.2);
 }
 
 .feedback__wrapper input {

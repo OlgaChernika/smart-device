@@ -104,7 +104,7 @@
     padding: 10px 15px;
 
     line-height: 22px;
-    color: $color-default-white;
+    color: $color-black-pearl;
 
     background: rgba($color-black-pearl, 0.15);
     border: none;
@@ -112,6 +112,11 @@
 
     &::placeholder {
       color: $color-default-white;
+    }
+
+    &:hover,
+    &:focus {
+      background: rgba($color-black-pearl, 0.2);
     }
   }
 

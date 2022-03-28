@@ -187,7 +187,7 @@
             </ul>
           </div>
         </section>
-        <section class="feedback">
+        <section class="feedback" id="feedback">
           <h2 class="visually-hidden">Обратная связь</h2>
           <div class="feedback__container container">
             <div class="feedback__image">
@@ -201,7 +201,7 @@
               <h3>Остались вопросы? Задайте их&nbsp;нам!</h3>
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <div data-validate>
-                <form action="http://echo.htmlacademy.ru" method="POST" id="feedback">
+                <form action="http://echo.htmlacademy.ru" method="POST" id="feedback-form">
                   <label for="name" data-validate-type="text" data-limitations="letters">
                     <input type="text" name="user-name" maxlength="100" id="name" placeholder="Имя" required>
                   </label>
@@ -304,16 +304,16 @@
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
           <div data-validate>
-            <form action="http://echo.htmlacademy.ru" method="POST" data-form-name="callback" id="callback">
+            <form action="http://echo.htmlacademy.ru" method="POST" data-form-name="callback" id="callback-form">
               <label for="callback-name" data-validate-type="text" data-limitations="letters">
-                <input type="text" data-focus name="callback-name" maxlength="100" id="callback-name" placeholder="Имя" required>
+                <input type="text" data-focus name="user-name" maxlength="100" id="callback-name" placeholder="Имя" required>
               </label>
               <label for="callback-phone" data-validate-type="phone">
-                <input name="callback-phone" type="tel" id="callback-phone" placeholder="Телефон" required>
+                <input name="user-phone" type="tel" id="callback-phone" placeholder="Телефон" required>
               </label>
-                <textarea name="callback-question" placeholder="Ваш вопрос"></textarea>
+                <textarea name="user-question" placeholder="Ваш вопрос"></textarea>
               <div class="modal__checkbox" data-validate-type="checkbox">
-                <input class="visually-hidden" type="checkbox" name="callback-agreement" id="callback-agreement" required>
+                <input class="visually-hidden" type="checkbox" name="user-agreement" id="callback-agreement" required>
                 <label for="callback-agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
               </div>
               <button class="btn" type="submit">Отправить</button>
