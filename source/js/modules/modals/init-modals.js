@@ -1,3 +1,4 @@
+import {fillForm} from '../local-storage';
 import {Modals} from './modals';
 
 let modals;
@@ -23,6 +24,12 @@ const settings = {
     eventTimeout: 400,
     openCallback: false,
     closeCallback: false,
+  },
+
+  'callback': {
+    openCallback: () => {
+      fillForm(document.querySelector('#callback-form'));
+    },
   },
 };
 

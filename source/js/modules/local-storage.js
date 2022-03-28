@@ -10,26 +10,25 @@ const onFormSubmit = (evt) => {
   localStorage.setItem(`form[${formName}]`, json);
 };
 
-export const fillForm = () => {
-  const forms = document.querySelectorAll('form');
-  forms.forEach((form) => {
-    const formName = form.id;
-    if (!localStorage.length) {
+export const fillForm = (form) => {
+  const formName = form.id;
+  if (!localStorage.length) {
+    return;
+  } else {
+    const json = localStorage.getItem(`form[${formName}]`);
+    const object = JSON.parse(json);
+    if (!object) {
       return;
-    } else {
-      const json = localStorage.getItem(`form[${formName}]`);
-      const object = JSON.parse(json);
-      if (!object) {
-        return;
-      }
-      for (let item of Object.entries(object)) {
-        const key = item[0];
-        const value = item[1];
-        const input = form.querySelector(`input[name="${key}"]`);
+    }
+    for (let item of Object.entries(object)) {
+      const key = item[0];
+      const value = item[1];
+      const input = form.querySelector(`input[name="${key}"]`);
+      if (input) {
         input.value = value;
       }
     }
-  });
+  }
 };
 
 export const initForm = () => {

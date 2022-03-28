@@ -5,7 +5,7 @@ import {initAccordions} from './modules/accordions/init-accordion';
 import {initAnchors} from './modules/smooth-scroll';
 import {resizeWindow} from './modules/set-page-padding';
 import {initJs} from './modules/init-js';
-import {fillForm, initForm} from './modules/local-storage';
+import {initForm} from './modules/local-storage';
 
 // ---------------------------------
 
@@ -25,8 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initJs();
     initModals();
     initFormValidate();
-    initForm('feedback-form');
-    fillForm();
+    initForm();
     initAccordions();
     initAnchors();
     window.addEventListener('resize', resizeWindow);
