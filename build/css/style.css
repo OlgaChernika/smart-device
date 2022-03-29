@@ -2654,6 +2654,9 @@ button,
 
   .service__image {
     max-width: 670px;
+  }
+
+  .service__image img {
     height: 250px;
   }
 

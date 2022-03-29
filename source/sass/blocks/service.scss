@@ -179,7 +179,6 @@
 
     @include vp-767 {
       max-width: 670px;
-      height: 250px;
     }
 
     &::before {
@@ -200,6 +199,10 @@
       width: 100%;
 
       object-fit: cover;
+
+      @include vp-767 {
+        height: 250px;
+      }
     }
   }
 }
