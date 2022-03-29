@@ -60,7 +60,7 @@
     position: relative;
 
     width: 500px;
-    padding: 40px;
+    padding: 37px 40px 44px;
 
     color: $color-default-white;
 
@@ -74,7 +74,7 @@
   }
 
   h2 {
-    margin: 0 0 15px;
+    margin: 0 0 4px;
 
     font-weight: 400;
     font-size: 30px;
@@ -84,6 +84,7 @@
 
   p {
     margin: 0 0 20px;
+    padding: 0 30px 0 0;
 
     line-height: 22px;
   }
@@ -91,7 +92,7 @@
   form {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 38px;
   }
 
   label {
@@ -126,6 +127,7 @@
 
   textarea {
     min-height: 155px;
+    padding: 23px 15px;
     margin-bottom: 25px;
   }
 
@@ -204,7 +206,7 @@
         content: "";
         position: absolute;
         top: 40%;
-        left: 5px;
+        left: 9px;
 
         width: 15px;
         height: 15px;
@@ -220,7 +222,7 @@
         content: "";
         position: absolute;
         top: 40%;
-        left: 7px;
+        left: 11px;
 
         display: none;
         width: 9px;
@@ -244,8 +246,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 17px;
+    right: 15px;
     z-index: 1;
 
     width: 40px;
@@ -259,6 +261,11 @@
     @include vp-767 {
       top: 10px;
       right: 10px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
     }
 
     @media (hover: hover), screen and (min-width: 0\0) {

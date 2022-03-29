@@ -70,6 +70,11 @@
       margin-bottom: 30px;
     }
 
+    @include vp-767 {
+      max-width: 670px;
+      margin: 0 auto 30px auto;
+    }
+
     h3 {
       position: absolute;
       top: 47px;
@@ -171,6 +176,11 @@
     position: relative;
 
     width: 100%;
+
+    @include vp-767 {
+      max-width: 670px;
+      height: 250px;
+    }
 
     &::before {
       content: "";

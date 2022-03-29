@@ -743,14 +743,14 @@ button,
 .modal__content {
   position: relative;
   width: 500px;
-  padding: 40px;
+  padding: 37px 40px 44px;
   color: #ffffff;
   background-color: #00b3ff;
   border-radius: 3px;
 }
 
 .modal h2 {
-  margin: 0 0 15px;
+  margin: 0 0 4px;
   font-weight: 400;
   font-size: 30px;
   line-height: 42px;
@@ -759,6 +759,7 @@ button,
 
 .modal p {
   margin: 0 0 20px;
+  padding: 0 30px 0 0;
   line-height: 22px;
 }
 
@@ -770,7 +771,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 38px;
 }
 
 .modal label {
@@ -826,6 +827,7 @@ button,
 
 .modal textarea {
   min-height: 155px;
+  padding: 23px 15px;
   margin-bottom: 25px;
 }
 
@@ -888,7 +890,7 @@ button,
   content: "";
   position: absolute;
   top: 40%;
-  left: 5px;
+  left: 9px;
   width: 15px;
   height: 15px;
   border: 1px solid #ffffff;
@@ -905,7 +907,7 @@ button,
   content: "";
   position: absolute;
   top: 40%;
-  left: 7px;
+  left: 11px;
   display: none;
   width: 9px;
   height: 6px;
@@ -926,8 +928,8 @@ button,
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 17px;
+  right: 15px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -1275,10 +1277,6 @@ button,
   margin-bottom: 6px;
 }
 
-.social {
-  margin-left: 15px;
-}
-
 .social__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1288,13 +1286,24 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 140px;
-  margin: 28px 0 0;
+  width: 170px;
+  margin: 23px 0 0;
   padding: 0;
   list-style: none;
-  -webkit-column-gap: 25px;
-  -moz-column-gap: 25px;
-  column-gap: 25px;
+  -webkit-column-gap: 15px;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+}
+
+.social__list a {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 }
 
 .social__icon {
@@ -2107,8 +2116,12 @@ button,
     margin-bottom: 8px;
   }
 
+  .social {
+    margin-right: -15px;
+  }
+
   .social__list {
-    margin: 10px 0 0;
+    margin: 5px 0 0;
   }
 
   .intro-content {
@@ -2292,6 +2305,11 @@ button,
     right: 10px;
   }
 
+  .modal__close-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
   .modal--fit-content .modal__content {
     width: 100%;
   }
@@ -2445,7 +2463,7 @@ button,
   }
 
   .social__list {
-    margin: 10px 0 0 -11px;
+    margin: 5px 0 0 -11px;
   }
 
   .intro-content {
@@ -2609,6 +2627,11 @@ button,
     display: none;
   }
 
+  .service__item {
+    max-width: 670px;
+    margin: 0 auto 30px auto;
+  }
+
   .service__item h3 {
     top: 25px;
     left: 30px;
@@ -2627,6 +2650,11 @@ button,
     width: 3px;
     height: 5px;
     background-size: 3px 5px;
+  }
+
+  .service__image {
+    max-width: 670px;
+    height: 250px;
   }
 
   .feedback {
